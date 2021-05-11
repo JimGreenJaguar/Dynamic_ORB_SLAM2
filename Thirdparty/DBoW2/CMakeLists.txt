@@ -24,6 +24,7 @@ set(SRCS_DUTILS
   DUtils/Random.cpp
   DUtils/Timestamp.cpp)
 
+set(OpenCV_DIR "/home/mate/src/opencv-3.4.5/local/share/OpenCV/") # add by mate
 find_package(OpenCV 3.0 QUIET)
 if(NOT OpenCV_FOUND)
    find_package(OpenCV 2.4.3 QUIET)

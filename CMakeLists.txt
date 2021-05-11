@@ -28,6 +28,8 @@ endif()
 
 LIST(APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake_modules)
 
+#find_package(OpenCV 3) # add by mate
+set(OpenCV_DIR "/home/mate/src/opencv-3.4.5/local/share/OpenCV/") # add by mate
 find_package(OpenCV 3.4.5 QUIET)
 if(NOT OpenCV_FOUND)
    find_package(OpenCV 2.4.3 QUIET)
@@ -36,8 +38,13 @@ if(NOT OpenCV_FOUND)
    endif()
 endif()
 
+MESSAGE("OPENCV VERSION:")
+MESSAGE(${OpenCV_VERSION})
+
 find_package(Eigen3 3.1.0 REQUIRED)
 find_package(Pangolin REQUIRED)
+
+MESSAGE("---Eigen_INCLUDE_DIRS: ", ${Eigen_INCLUDE_DIRS})
 
 include_directories(
 ${PROJECT_SOURCE_DIR}
