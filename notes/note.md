@@ -21,3 +21,19 @@ set(OpenCV_DIR "/home/mate/src/opencv-3.4.5/local/share/OpenCV/") # add by mate
 ./Examples/Stereo/stereo_euroc Vocabulary/ORBvoc.txt Examples/Stereo/EuRoC.yaml ~/Downloads/datasets/EuRoC/MH_01_easy/mav0/cam0/data ~/Downloads/datasets/EuRoC/MH_01_easy/mav0/cam1/data Examples/Stereo/EuRoC_TimeStamps/MH01.txt
 ```
 
+
+
+其他：
+
+fork[Dynamic-ORB-SLAM2](https://github.com/Horacehxw/Dynamic_ORB_SLAM2)到个人github账号，然后在本地仓库：
+
+```bash
+git remote add jaguar git@github.com:JimGreenJaguar/Dynamic_ORB_SLAM2.git
+```
+
+推送本地更新到个人github账号：
+
+```bash
+git push jaguar dev
+```
+
