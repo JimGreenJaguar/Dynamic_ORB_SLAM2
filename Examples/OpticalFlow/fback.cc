@@ -3,6 +3,10 @@
 //
 #include <DynamicExtractor.h>
 #include <chrono>
+
+
+#include <opencv2/imgproc/types_c.h> // mate fix CV_BGR2GRAY decleard
+#include <opencv2/imgcodecs/legacy/constants_c.h> // mate fix CV_LOAD_IMAGE_COLOR
 #include <opencv2/opencv.hpp>
 #include "opencv2/video/tracking.hpp"
 #include "opencv2/imgproc.hpp"

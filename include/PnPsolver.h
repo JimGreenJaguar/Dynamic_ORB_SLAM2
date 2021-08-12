@@ -51,6 +51,7 @@
 #ifndef PNPSOLVER_H
 #define PNPSOLVER_H
 
+#include <opencv2/imgproc/types_c.h> // mate fix CvMat undecleard
 #include <opencv2/core/core.hpp>
 #include "MapPoint.h"
 #include "Frame.h"

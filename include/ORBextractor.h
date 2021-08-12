@@ -23,7 +23,9 @@
 
 #include <vector>
 #include <list>
-#include <opencv/cv.h>
+//#include <opencv/cv.h>
+#include<opencv2/core.hpp>
+//#include<opencv2/imgproc/types_c.h>
 #include "DynamicExtractor.h"
 
 

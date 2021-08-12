@@ -25,6 +25,8 @@
 #include<chrono>
 #include<string>
 
+
+#include "opencv2/imgcodecs/legacy/constants_c.h"
 #include<opencv2/core/core.hpp>
 
 #include<System.h>
@@ -66,6 +68,7 @@ int main(int argc, char **argv) {
     if (argc > 6) {
         model_path = string(argv[6]);
     }
+    cout << "model_path: " << model_path << ", argc: " << argc;
     if (argc > 7) {
         skip = stoi(string(argv[7]));
     }
@@ -154,7 +157,9 @@ int main(int argc, char **argv) {
         ofs<< skip << ":" << totaltime / nImages << endl;
         ofs.close();
         // Save camera trajectory
-        SLAM.SaveTrajectoryTUM( argv[5]);
+        SLAM.SaveTrajectoryTUM( argv[5] );
+        //SLAM.SaveTrajectoryTUM( "trajectory.txt");
+
         //SLAM.SaveKeyFrameTrajectoryTUM("results/w_half_KeyFrameTrajectory.txt");
     }
 

@@ -25,6 +25,7 @@
 #include<iomanip>
 #include<chrono>
 
+#include "opencv2/imgcodecs/legacy/constants_c.h" // mate fix ,CV_LOAD_IMAGE_UNCHANGED decleard
 #include<opencv2/core/core.hpp>
 
 #include<System.h>

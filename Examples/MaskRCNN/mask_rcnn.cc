@@ -8,6 +8,8 @@
 #include <iostream>
 #include <string.h>
 #include <unordered_set>
+#include<opencv2/imgproc/types_c.h> // mate fix CV_BGR2GRAY undecleard
+#include "opencv2/imgcodecs/legacy/constants_c.h" // mate fix ,CV_LOAD_IMAGE_UNCHANGED decleard
 #include <opencv2/core/core.hpp>
 #include <opencv2/features2d/features2d.hpp>
 #include <opencv2/highgui/highgui.hpp>

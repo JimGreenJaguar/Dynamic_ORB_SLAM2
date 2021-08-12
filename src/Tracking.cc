@@ -21,6 +21,7 @@
 
 #include "Tracking.h"
 
+#include <opencv2/imgproc/types_c.h> // mate fix CV_BGR2GRAY undecleard
 #include<opencv2/core/core.hpp>
 #include<opencv2/features2d/features2d.hpp>
 

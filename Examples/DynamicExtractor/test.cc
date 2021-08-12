@@ -2,6 +2,9 @@
 // Created by horacehxw on 4/10/19.
 //
 
+#include "opencv2/imgcodecs/legacy/constants_c.h" // mate
+#include <opencv2/imgproc/types_c.h> // mate fix CV_BGR2GRAY decleard
+
 #include <DynamicExtractor.h>
 #include <chrono>
 
