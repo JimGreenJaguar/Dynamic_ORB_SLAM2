@@ -1,11 +1,12 @@
 cmake_minimum_required(VERSION 2.8)
 project(Dynamic_ORB_SLAM2)
 
+#SET(CMAKE_BUILD_TYPE Build) # mate
 IF(NOT CMAKE_BUILD_TYPE)
   SET(CMAKE_BUILD_TYPE Release)
 ENDIF()
 
-MESSAGE("Build type: " ${CMAKE_BUILD_TYPE})
+# MESSAGE("Build type: " ${CMAKE_BUILD_TYPE})
 
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -O3  -Wall  -march=native ")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O3 -Wall   -march=native")
@@ -29,8 +30,11 @@ endif()
 LIST(APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake_modules)
 
 #find_package(OpenCV 3) # add by mate
-set(OpenCV_DIR "/home/mate/src/opencv-3.4.5/local/share/OpenCV/") # add by mate
-find_package(OpenCV 3.4.5 QUIET)
+#set(OpenCV_DIR "/home/mate/src/opencv-3.4.5/local/share/OpenCV/") # add by mate
+#set(OpenCV_DIR "/home/mate/src/opencv-3.4.15/local/share/OpenCV/") # add by mate
+set(OpenCV_DIR "/home/mate/src/opencv-4.5.3/local/lib/cmake/opencv4/") # add by mate
+#find_package(OpenCV 3.4.5 QUIET)
+find_package(OpenCV 4.5 QUIET)
 if(NOT OpenCV_FOUND)
    find_package(OpenCV 2.4.3 QUIET)
    if(NOT OpenCV_FOUND)
@@ -38,8 +42,7 @@ if(NOT OpenCV_FOUND)
    endif()
 endif()
 
-MESSAGE("OPENCV VERSION:")
-MESSAGE(${OpenCV_VERSION})
+MESSAGE("OPENCV VERSION: " ${OpenCV_VERSION})
 
 find_package(Eigen3 3.1.0 REQUIRED)
 find_package(Pangolin REQUIRED)
